@@ -1,15 +1,16 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
+    <head>
         <meta charset="UTF-8">
         <meta name="description" content="A landing webpage to introduce the user to theme of the website.">
         <title>Home</title>
         <link rel="stylesheet" href="styles.css">
-    </header>
+    </head>
     <body>
+        <!--Naviation Bar-->
         <header class ="navbar">
             <a href="home.html"class="logo">
-                <img src="logo.png" class="logo-img">
+                <img src="img\logo.png" class="logo-img">
             </a>
             <div class="nav-title"></div>
             <nav class="links">
@@ -26,7 +27,33 @@
                 titleElement.textContent = pageName; 
             });
         </script>
-
+        <!--Page Content-->
+        <div class="banner">
+            <img src="img\homebanner.jpg">
+        </div>
+        <div class= "container">
+            <div class="left-half">
+                <div class="intro">
+                    <h2 class = "intro-header">Aim and Ambition</h2>
+                    <p id = "content" class="intro-text"></p>
+                </div>
+            </div>
+            <script>
+                fetch('intro.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('content').textContent = data;
+                })
+                .catch(error => {
+                    document.getElementById('content').textContent = 'Error loading content'
+                });
+            </script>
+            <div class="right-half">
+                <img src="img\apollo.jpg">
+                <a href="https://www.bbc.co.uk/newsround/48789792" class = "img-link">Humanity's first steps on the moon!</a>
+            </div>
+        </div>
+        <!--Footer-->
         <footer class ="footer">
             <p>@Copyright 2025. All rights reserved.</p>
         </footer>
