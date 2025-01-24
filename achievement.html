@@ -28,25 +28,65 @@
         </script>
         <div class = "events">
             <div class ="event-box">
-                <h2>Event One</h2>
-                <img src="img\">
-                <p>lorem ipsum</p>
+                <h2>Launch of Sputnik 1</h2>
+                <img src="img\sputnik2.jpg">
+                <p id="sputnik"></p>
             </div>
             <div class ="event-box">
-                <h2>Event Two</h2>
-                <img src="img\">
-                <p>lorem ipsum</p>
+                <h2>The Apollo 11 Moon Landing</h2>
+                <img src="img\apollo2.jpg">
+                <p id="apollo"></p>
             </div>
             <div class ="event-box">
-                <h2>Event Three</h2>
-                <img src="img\">
-                <p>lorem ipsum</p>
+                <h2>The Launch of the International Space Station</h2>
+                <img src="img\iss2.jpg">
+                <p id="iss"></p>
             </div>
             <div class ="event-box">
-                <h2>Event Four</h2>
-                <img src="img\">
-                <p>lorem ipsum</p>
+                <h2>The Mars Rover Landings</h2>
+                <img src="img\rover2.jpg">
+                <p id="rover"></p>
             </div>
+            <script>
+                fetch('txt\\sputnik.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('sputnik').textContent = data;
+                })
+                .catch(error => {
+                    document.getElementById('sputnik').textContent = 'Error loading content'
+                });
+            </script>
+            <script>
+                fetch('txt\\apollo.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('apollo').textContent = data;
+                })
+                .catch(error => {
+                    document.getElementById('apollo').textContent = 'Error loading content'
+                });
+            </script>
+            <script>
+                fetch('txt\\iss.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('iss').textContent = data;
+                })
+                .catch(error => {
+                    document.getElementById('iss').textContent = 'Error loading content'
+                });
+            </script>
+            <script>
+                fetch('txt\\rover.txt')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('rover').textContent = data;
+                })
+                .catch(error => {
+                    document.getElementById('rover').textContent = 'Error loading content'
+                });
+            </script>
         </div>
         <div class = "grid">
             <div class="grid-container">
