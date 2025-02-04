@@ -27,18 +27,25 @@
             });
         </script>
         <div class="form-container">
-            <h2>Get in Touch</h2>
             <div class="contact-form">
-                <form action="#" method="post">
-                    <label for="name">Enter your full name</label>
-                    <input type="text" id="name" name="name" required>
-                    <label for="email">Enter your email address</label>
-                    <input type="email" id="email" name="email" required>
-                    <label for="message">Type your message here</label>
-                    <textarea id="message" name="message" rows="4" required></textarea>
+                <form id="contact-form" action="#" method="post">
+                    <input type="text" id="name" name="name" placeholder="Enter your full name" 
+                    maxlength="100" pattern="^[A-Za-z\s]+$" title="Only english characters are permitted" required>
+                    <input type="email" id="email" name="email" placeholder="Enter your email address" maxlength="255" required>
+                    <textarea id="message" name="message" rows="4"  placeholder="Type your message here" maxlength="1000"></textarea>
                     <button type="submit">Send Message</button>
                 </form>
+                <script src="submit.js"></script>
             </div>
+        </div>
+        
+        <div class="map-container">
+            <div class="map">
+                <iframe src="https://shorturl.at/WaNwT" width="1000" height="800" 
+                allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-wh
+                en-downgrade"></iframe>
+            </div>
+            <script src="script.js"></script>
         </div>
         
         <footer class ="footer">
