@@ -10,11 +10,6 @@ document.getElementById('contact-form').addEventListener('submit', function(even
         return;
     }
 
-    console.log('Form submitted!');
-    console.log(`Name: ${name}`);
-    console.log(`Email: ${email}`);
-    console.log(`Message: ${message}`);
-
     alert('Thank you for your submission!');
     document.getElementById('contact-form').reset();
 });
