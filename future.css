@@ -83,7 +83,6 @@ html, body {
     flex: 1;
 }
 
-/* Central vertical timeline */
 .timeline::before {
     content: '';
     position: absolute;
@@ -99,26 +98,50 @@ html, body {
     position: relative;
     width: 50%;
     padding: 20px;
+    padding-top: 100px;
     box-sizing: border-box;
 }
 
 .timeline-item img {
     width: 150px;
     height: 150px;
+    border: 3px solid navy;
     border-radius: 90px;
     position: relative;
+    transition: transform 0.3s ease, border 0.3s ease;
+}
+
+.timeline-item img:hover {
+    transform: scale(1.2);
+}
+
+.timeline-item:nth-child(1) img {
     right: 200px;
-    bottom: 90px;
+    bottom: 120px;
 }
 
-.timeline-item:nth-child(odd) {
-    left: -30%;
-    text-align: right;
+.timeline-item:nth-child(2) img {
+    left: 200px;
+    bottom: 140px;
 }
 
-.timeline-item:nth-child(even) {
-    left: 80%;
-    text-align: left;
+.timeline-item:nth-child(3) img {
+    right: 200px;
+    bottom: 140px;
+}
+
+.timeline-item:nth-child(4) img {
+    left: 200px;
+    bottom: 140px;
+}
+
+/*Balancing every other card's side*/
+.timeline-item:nth-child(odd) .card {
+    right: 185px;
+}
+
+.timeline-item:nth-child(even) .card {
+    left: 195px;
 }
 
 .card {
@@ -129,25 +152,49 @@ html, body {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     width: 200px;
-    height: 150px;
+    height: 100px;
 }
 
-.card:nth-child(odd) {
-    right: 100px;
+.card h3 {
+    font-family: Arial;
+    font-size: 20px;
+    color: darkblue;
+    margin-top: 0;
 }
 
+.card p {
+    font-family: Arial;
+    font-size: 16px;
+    color: black;
+}
 
-.timeline-item:nth-child(odd)::before {
+/*These two specifically fix some of the formatting on the third card*/
+.timeline-item:nth-child(3) .card h3 {
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+
+.timeline-item:nth-child(3) .card p {
+    margin-top: 5px;
+}
+
+/*The Connecting Lines*/
+.timeline-item:nth-child(odd) .card:before {
     content: '';
     position: absolute;
     top: 50%;
-    width: 100px;
+    width: 70px;
     height: 2px;
     border-top: 2px dashed navy;
-    right: -78px;
+    right: -70px;
 }
 
-.timeline-item:nth-child(even)::before {
-    left: -78px;
-
+.timeline-item:nth-child(even) .card:before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 88px;
+    height: 2px;
+    border-top: 2px dashed navy;
+    left: -85px;
 }
