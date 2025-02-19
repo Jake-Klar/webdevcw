@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <header>
+    <head>
         <meta charset="UTF-8">
         <meta name="description" content="A page for contacting the creator.">
         <title>Contact Us</title>
@@ -23,13 +23,13 @@
             document.addEventListener("DOMContentLoaded", function() {
                 var titleElement = document.querySelector('.nav-title');
                 var pageName = document.title;
-                titleElement.textContent = pageName; 
+                titleElement.textContent = pageName;
             });
         </script>
         <div class="form-container">
             <div class="contact-form">
                 <form id="contact-form" action="#" method="post">
-                    <input type="text" id="name" name="name" placeholder="Enter your full name" 
+                    <input type="text" id="name" name="name" placeholder="Enter your full name"
                     maxlength="100" pattern="^[A-Za-z\s]+$" title="Only english characters are permitted" required>
                     <input type="email" id="email" name="email" placeholder="Enter your email address" maxlength="255" required>
                     <textarea id="message" name="message" rows="4"  placeholder="Type your message here" maxlength="1000"></textarea>
@@ -38,15 +38,15 @@
                 <script src="submit.js"></script>
             </div>
         </div>
-        
+
         <div class="map-container">
             <div class="map">
-                <iframe src="https://shorturl.at/WaNwT" width="1000" height="800" 
+                <iframe src="https://shorturl.at/WaNwT" width="1000" height="800"
                 allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-wh
                 en-downgrade"></iframe>
             </div>
         </div>
-        
+
         <footer class ="footer">
             <p>@Copyright 2025. All rights reserved.</p>
         </footer>
