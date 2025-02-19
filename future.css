@@ -1,0 +1,140 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #778899;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    border-bottom: 3px solid #4e54c8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-img {
+    height: 45px;
+    background-color: transparent;
+    transform: rotate(40deg);
+    padding: 10px;
+}
+
+.nav-title {
+    font-family: Arial;
+    font-Size: 24px;
+    font-weight: Bold;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    position: absolute;
+    right: 48.2%;
+    font-style: italic;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+}
+
+.navbar a{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.footer {
+    display: flex;
+    height: 30px;
+    background-color: lightblue;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-text {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.timeline {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    flex: 1;
+}
+
+/* Central vertical timeline */
+.timeline::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: #333;
+    transform: translateX(-50%);
+}
+
+.timeline-item {
+    position: relative;
+    width: 50%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.timeline-item:nth-child(odd) {
+    left: -30%;
+    text-align: right;
+}
+
+.timeline-item:nth-child(even) {
+    left: 80%;
+    text-align: left;
+}
+
+.card {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+}
+
+/* Dashed lines connecting timeline to cards */
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 100px;
+    height: 2px;
+    border-top: 2px dashed navy;
+}
+
+.timeline-item:nth-child(odd)::before {
+    right: -80px;
+}
+
+.timeline-item:nth-child(even)::before {
+    left: -80px;
+
+}
