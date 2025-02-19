@@ -65,7 +65,7 @@ html, body {
     align-items: center;
     width: 100%;
     justify-content: center;
-    margin-top: 10px;
+    margin-top: 0px;
 }
 
 .footer-text {
@@ -90,8 +90,8 @@ html, body {
     top: 0;
     bottom: 0;
     left: 50%;
-    width: 4px;
-    background: #333;
+    width: 10px;
+    background: linear-gradient(0deg,#4e54c8, #8f94fb);
     transform: translateX(-50%);
 }
 
@@ -100,6 +100,15 @@ html, body {
     width: 50%;
     padding: 20px;
     box-sizing: border-box;
+}
+
+.timeline-item img {
+    width: 150px;
+    height: 150px;
+    border-radius: 90px;
+    position: relative;
+    right: 200px;
+    bottom: 90px;
 }
 
 .timeline-item:nth-child(odd) {
@@ -113,28 +122,32 @@ html, body {
 }
 
 .card {
+    text-align: center;
     background: white;
     padding: 15px;
     border-radius: 8px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    width: 200px;
+    height: 150px;
 }
 
-/* Dashed lines connecting timeline to cards */
-.timeline-item::before {
+.card:nth-child(odd) {
+    right: 100px;
+}
+
+
+.timeline-item:nth-child(odd)::before {
     content: '';
     position: absolute;
     top: 50%;
     width: 100px;
     height: 2px;
     border-top: 2px dashed navy;
-}
-
-.timeline-item:nth-child(odd)::before {
-    right: -80px;
+    right: -78px;
 }
 
 .timeline-item:nth-child(even)::before {
-    left: -80px;
+    left: -78px;
 
 }
