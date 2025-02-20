@@ -1,0 +1,147 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #778899;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    display: flex;
+    height: 50px;
+    align-items: center;
+    background: linear-gradient(90deg, #4e54c8, #8f94fb);
+    border-bottom: 3px solid #4e54c8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo-img {
+    height: 45px;
+    background-color: transparent;
+    transform: rotate(40deg);
+    padding: 10px;
+}
+
+.nav-title {
+    font-family: Arial;
+    font-Size: 24px;
+    font-weight: Bold;
+    color: white;
+    text-decoration: underline;
+    text-align: center;
+    position: absolute;
+    right: 48.2%;
+    font-style: italic;
+}
+
+.links {
+    display: flex;
+    justify-content: flex-end;
+    width: 100%;
+    padding: 10px;
+}
+
+.navbar a{
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+    transform: scale(1.1);
+}
+
+.footer {
+    display: flex;
+    height: 30px;
+    background-color: lightblue;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.footer-text {
+    font-family: Arial;
+    font-size: 16px;
+    font-weight: bold;
+    color: black;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+}
+
+.container {
+    display: flex;
+    width: 100%;
+    align-items: flex-start;
+    flex: 1;
+}
+
+.right-half {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    flex-direction: column;
+    flex: 1;
+}
+
+.left-half {
+    width: 50%;
+    padding: 20px;
+    flex: 1;
+}
+
+.intro {
+    max-width: 100%;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    border: 2px solid darkblue;
+    box-sizing: border-box;
+    display: inline-block;
+    align-self: flex-start;
+}
+
+.intro-header {
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: darkblue;
+    text-decoration: underline;
+    margin-bottom: 10px;
+}
+
+.intro-text {
+    font-family: Arial;
+    font-size: 16px;
+    color: black;
+    max-width: 100%;
+    word-wrap:break-word;
+    padding: 10px;
+}
+
+.img-link {
+    margin-top: 10px;
+    font-family: Arial;
+    font-size: 24px;
+    font-weight: bold;
+    color: black;
+    align-self: center;
+}
+
+.img-link:hover {
+    color:blueviolet;
+    text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
+    text-decoration: underline;
+}

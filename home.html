@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Webpage Information and Stylesheets -->
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="A landing webpage to introduce the user to theme of the website.">
         <title>Home</title>
-        <link rel="stylesheet" href="styles.css">
+        <link rel="stylesheet" href="css/home.css">
     </head>
     <body>
         <!--Naviation Bar-->
@@ -13,6 +14,7 @@
                 <img src="img\logo.png" class="logo-img">
             </a>
             <div class="nav-title"></div>
+            <!-- Navigation Links -->
             <nav class="links">
                 <a href="home.html">Home</a>
                 <a href="history.html">History</a>
@@ -20,34 +22,22 @@
                 <a href="contact.html">Contact Us</a>
             </nav>
         </header>
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var titleElement = document.querySelector('.nav-title');
-                var pageName = document.title;
-                titleElement.textContent = pageName;
-            });
-        </script>
-        <!--Page Content-->
+        <!-- Full Screen Width Banner -->
         <div class="banner">
             <img src="img\homebanner.jpg">
         </div>
+        <!-- Main Page Container -->
         <div class= "container">
+            <!-- Seperating Page into Two Independent Halves -->
             <div class="left-half">
+                <!-- Text Portion -->
                 <div class="intro">
                     <h2 class = "intro-header">Aim and Ambition</h2>
                     <p id = "content" class="intro-text"></p>
                 </div>
             </div>
-            <script>
-                fetch('txt\\intro.txt')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('content').textContent = data;
-                })
-                .catch(error => {
-                    document.getElementById('content').textContent = 'Error loading content'
-                });
-            </script>
+            <!-- Script that inserts the introduction text -->
+            <script src="js/intro.js"></script>
             <div class="right-half">
                 <img src="img\apollo.jpg">
                 <a href="https://www.bbc.co.uk/newsround/48789792" class = "img-link">Humanity's first steps on the moon!</a>
@@ -57,5 +47,7 @@
         <footer class ="footer">
             <p>@Copyright 2025. All rights reserved.</p>
         </footer>
+        <!-- Script that dynamically sets the navigation bar title -->
+        <script src="js/header.js"></script>
     </body>
 </html>

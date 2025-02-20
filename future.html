@@ -1,17 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Webpage information and stylesheets -->
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="A page detailing the future of space exploration.">
         <title>Future</title>
-        <link rel="stylesheet" href="future.css">
+        <link rel="stylesheet" href="css/future.css">
     </head>
     <body>
+        <!-- Navigation Bar -->
         <header class ="navbar">
             <a href="home.html"class="logo">
                 <img src="img\logo.png" class="logo-img">
             </a>
             <div class="nav-title"></div>
+            <!-- Navigation Links -->
             <nav class="links">
                 <a href="home.html">Home</a>
                 <a href="history.html">History</a>
@@ -19,15 +22,16 @@
                 <a href="contact.html">Contact Us</a>
             </nav>
         </header>
+        <!-- Timeline -->
             <div class="timeline">
                 <div class="timeline-item">
+                    <!-- Includes the information about each timeline event -->
                     <div class="card">
                         <h3>Artemis III (2026)</h3>
                         <p>First crewed Moon landing since Apollo</p>
                         <img src="img/artemis.jpg">
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="card">
                         <h3>Rosalind Franklin Rover (2028)</h3>
@@ -35,7 +39,6 @@
                         <img src="img/rover3.jpg">
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="card">
                         <h3>Europa Clipper Mission (2030)</h3>
@@ -43,7 +46,6 @@
                         <img src="img/europa.jpg">
                     </div>
                 </div>
-
                 <div class="timeline-item">
                     <div class="card">
                         <h3>Mars Sample Return (2033)</h3>
@@ -52,17 +54,11 @@
                     </div>
                 </div>
             </div>
-
-        <script>
-            document.addEventListener("DOMContentLoaded", function() {
-                var titleElement = document.querySelector('.nav-title');
-                var pageName = document.title;
-                titleElement.textContent = pageName;
-            });
-        </script>
-
+        <!-- Footer -->
         <footer class ="footer">
             <p>@Copyright 2025. All rights reserved.</p>
         </footer>
+        <!-- Script that dynamically sets the navigation bar title -->
+        <script src="js/header.js"></script>
     </body>
 </html>
