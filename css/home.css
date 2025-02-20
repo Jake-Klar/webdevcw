@@ -8,6 +8,7 @@ html, body {
     flex-direction: column;
 }
 
+/* Navigation bar styling */
 .navbar {
     display: flex;
     height: 50px;
@@ -52,12 +53,15 @@ html, body {
     margin: 0 10px;
 }
 
+/* Underlying the links on hover */
 .navbar a:hover {
+    cursor: pointer;
     text-decoration: underline;
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
     transform: scale(1.1);
 }
 
+/* Footer bar styling */
 .footer {
     display: flex;
     height: 30px;
@@ -76,10 +80,12 @@ html, body {
     text-align: center;
 }
 
+/* Full width banner image */
 .banner img {
     width: 100%;
 }
 
+/* Correctly setting screen split */
 .container {
     display: flex;
     width: 100%;
@@ -87,6 +93,7 @@ html, body {
     flex: 1;
 }
 
+/* Styling for the large image and thumbnail link */
 .right-half {
     width: 50%;
     display: flex;
@@ -96,6 +103,7 @@ html, body {
     flex: 1;
 }
 
+/* Styling for the informational text box */
 .left-half {
     width: 50%;
     padding: 20px;
@@ -140,8 +148,10 @@ html, body {
     align-self: center;
 }
 
+/* Underlining and creating a glow around link when hovered */
 .img-link:hover {
     color:blueviolet;
+    cursor: pointer;
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
     text-decoration: underline;
 }

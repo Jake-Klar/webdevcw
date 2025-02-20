@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+    <!-- Webpage information and stylesheets -->
     <head>
         <meta charset="UTF-8">
         <meta name="description" content="A page for contacting the creator.">
@@ -7,11 +8,13 @@
         <link rel="stylesheet" href="css/contact.css">
     </header>
     <body>
+        <!-- Navigation Bar -->
         <header class ="navbar">
             <a href="home.html"class="logo">
                 <img src="img\logo.png" class="logo-img">
             </a>
             <div class="nav-title"></div>
+            <!-- Navigation Links -->
             <nav class="links">
                 <a href="home.html">Home</a>
                 <a href="history.html">History</a>
@@ -19,6 +22,7 @@
                 <a href="contact.html">Contact Us</a>
             </nav>
         </header>
+        <!-- Contact Form -->
         <div class="form-container">
             <div class="contact-form">
                 <form id="contact-form" action="#" method="post">
@@ -28,10 +32,11 @@
                     <textarea id="message" name="message" rows="4"  placeholder="Type your message here" maxlength="1000"></textarea>
                     <button type="submit">Send Message</button>
                 </form>
-                <script src="submit.js"></script>
+                <!-- Contact for submition script -->
+                <script src="js/submit.js"></script>
             </div>
         </div>
-
+        <!-- Google map -->
         <div class="map-container">
             <div class="map">
                 <iframe src="https://shorturl.at/WaNwT" width="1000" height="800"
@@ -39,10 +44,11 @@
                 en-downgrade"></iframe>
             </div>
         </div>
-
+        <!-- Footer -->
         <footer class ="footer">
             <p>@Copyright 2025. All rights reserved.</p>
         </footer>
+        <!-- Script that dynamically sets the navigation bar title -->
         <script src="js/header.js"></script>
     </body>
 </html>

@@ -9,6 +9,7 @@ html, body {
     flex-direction: column;
 }
 
+/* Navigation bar styling */
 .navbar {
     display: flex;
     height: 50px;
@@ -55,10 +56,12 @@ html, body {
 
 .navbar a:hover {
     text-decoration: underline;
+    cursor: pointer;
     text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.8);
     transform: scale(1.1);
 }
 
+/* Footer bar styling */
 .footer {
     display: flex;
     height: 30px;
@@ -77,6 +80,7 @@ html, body {
     text-align: center;
 }
 
+/* Timeline container div */
 .timeline {
     position: relative;
     max-width: 800px;
@@ -84,6 +88,7 @@ html, body {
     flex: 1;
 }
 
+/* Styling the actual visible timline bar */
 .timeline::before {
     content: '';
     position: absolute;
@@ -95,6 +100,7 @@ html, body {
     transform: translateX(-50%);
 }
 
+/* A point on the timeline */
 .timeline-item {
     position: relative;
     width: 50%;
@@ -103,6 +109,7 @@ html, body {
     box-sizing: border-box;
 }
 
+/* The events associated image in a circular frame */
 .timeline-item img {
     width: 150px;
     height: 150px;
@@ -112,10 +119,12 @@ html, body {
     transition: transform 0.3s ease, border 0.3s ease;
 }
 
+/* Expanding the image on hover */
 .timeline-item img:hover {
     transform: scale(1.2);
 }
 
+/* The position for each image */
 .timeline-item:nth-child(1) img {
     right: 200px;
     bottom: 120px;
@@ -145,6 +154,7 @@ html, body {
     left: 195px;
 }
 
+/* Informational card styling */
 .card {
     text-align: center;
     background: white;
@@ -169,7 +179,7 @@ html, body {
     color: black;
 }
 
-/*These two specifically fix some of the formatting on the third card*/
+/*These two specifically fix some of the formatting on the third card as it is longer*/
 .timeline-item:nth-child(3) .card h3 {
     margin-top: 0;
     margin-bottom: 5px;
